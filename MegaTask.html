@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CssMegaTask</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.brand img {
+  display: block;
+  width: 120px;
+  filter: brightness(0) invert(1);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+}
+
+.artisan-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.artisan-left {
+  position: relative;
+  width: 50%;
+}
+
+.badge {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  border: 2px solid gold;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.badge span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.image-stack {
+  position: relative;
+}
+
+.img-large {
+  width: 70%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.img-small {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  width: 40%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.artisan-right {
+  width: 45%;
+  text-align: center;
+}
+
+.artisan-right h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.artisan-right h1 span {
+  font-style: italic;
+  display: block;
+  font-size: 40px;
+}
+
+.artisan-right p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.artisan-right a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.fixed-panel {
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 999;
+}
+
+.fixed-box {
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 180px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fixed-box .num {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+.fixed-box .text {
+  font-size: 12px;
+  color: #555;
+}
+
+.fixed-buy {
+  background: #ff2d55;
+  color: #fff;
+  border: none;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+</style>
+<body>
+<div class="hero">
+  <header class="topbar">
+    <div class="brand">
+      <img src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/lmobile-ogo.png" alt="Bridge">
+    </div>
+  </header>
+
+  <img class="img" src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-background.jpg" alt="">
+  <img class="hero-img" src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/slider-graphic-3.png" alt="">
+</div>
+
+<section class="artisan-section">
+  <div class="artisan-left">
+    <div class="badge">
+      Lorem Ipsum<br>
+      <span>Tradition & Craft</span>
+    </div>
+
+    <div class="image-stack">
+      <img class="img-large" src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/h1-img-1.jpg" alt="">
+      <img class="img-small" src="https://bridge248.qodeinteractive.com/wp-content/uploads/2018/06/h1-img-2.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="artisan-right">
+    <h1>Artisan<br><span>chocolatier</span></h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <a href="#">READ ALL</a>
+  </div>
+</section>
+
+<div class="fixed-panel">
+  <div class="fixed-box">
+    <div class="num">630+</div>
+    <div class="text">Bridge demos</div>
+  </div>
+  <button class="fixed-buy">BUY NOW $69</button>
+</div>
+
+
+
+
+</body>
+</html>
