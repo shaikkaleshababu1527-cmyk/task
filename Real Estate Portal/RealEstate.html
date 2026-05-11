@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real estate Portal</title>
+</head>
+
+<style>
+   *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#333;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      background:#0f172a;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo{
+      color:#fff;
+      font-size:30px;
+      font-weight:700;
+    }
+
+    .logo span{
+      color:#d4af37;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#fff;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:#d4af37;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400&auto=format&fit=crop')
+      center/cover no-repeat;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 35px;
+      background:#d4af37;
+      color:#0f172a;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:40px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-4px);
+    }
+
+    /* COMMON SECTION */
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#0f172a;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    /* PROPERTY SECTION */
+
+    .property-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .property-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .property-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .property-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .property-info{
+      padding:20px;
+    }
+
+    .price{
+      color:#d4af37;
+      font-size:24px;
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .property-info h3{
+      margin-bottom:10px;
+      color:#0f172a;
+    }
+
+    .property-info p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    /* SERVICES */
+
+    .services{
+      background:white;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .service-box{
+      background:#f8fafc;
+      padding:40px 30px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .service-box:hover{
+      background:#0f172a;
+      color:white;
+      transform:translateY(-8px);
+    }
+
+    .service-box h3{
+      margin:20px 0;
+      font-size:24px;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    .about-text h2{
+      font-size:42px;
+      color:#0f172a;
+      margin-bottom:20px;
+    }
+
+    .about-text p{
+      margin-bottom:20px;
+      color:#555;
+      line-height:1.8;
+    }
+
+    /* STATS */
+
+    .stats{
+      background:#0f172a;
+      color:white;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .stat-box h2{
+      font-size:50px;
+      color:#d4af37;
+    }
+
+    .stat-box p{
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    /* TESTIMONIALS */
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .testimonial{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .testimonial p{
+      margin-bottom:20px;
+      color:#555;
+      line-height:1.7;
+    }
+
+    .testimonial h4{
+      color:#0f172a;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:white;
+    }
+
+    .contact-form{
+      max-width:700px;
+      margin:auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:10px;
+      background:#f1f5f9;
+      font-size:16px;
+    }
+
+    textarea{
+      resize:none;
+      height:150px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+
+      nav ul li a{
+        font-size:14px;
+      }
+
+    }
+
+</style>
+<body>
+
+     <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      Ongole <span>Properties</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+      <h1>Find Your Dream Home</h1>
+      <p>Premium Villas, Apartments & Plots in Ongole</p>
+      <a href="#" class="btn">Explore Now</a>
+    </div>
+
+  </section>
+
+  <!-- PROPERTIES -->
+
+  <section id="properties">
+
+    <div class="section-title">
+      <h2>Featured Properties</h2>
+      <p>Explore our latest premium listings</p>
+    </div>
+
+    <div class="property-grid">
+
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+        <div class="property-info">
+          <div class="price">₹75 Lakhs</div>
+          <h3>Luxury Villa</h3>
+          <p>Modern 3BHK villa with parking and garden.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
+        <div class="property-info">
+          <div class="price">₹55 Lakhs</div>
+          <h3>Modern Apartment</h3>
+          <p>Beautiful apartment near city center.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop">
+        <div class="property-info">
+          <div class="price">₹1.2 Crore</div>
+          <h3>Premium Duplex</h3>
+          <p>Spacious duplex house with luxury interiors.</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>We provide trusted real estate solutions</p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-box">
+        <h3>Buy Property</h3>
+        <p>Find the best homes and investments in Ongole.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Sell Property</h3>
+        <p>Get the best market value for your property.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Property Rental</h3>
+        <p>Affordable rental homes and apartments available.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="about-text">
+        <h2>About Ongole Properties</h2>
+        <p>
+          Ongole Properties is a trusted real estate platform helping families
+          find their dream homes and investments.
+        </p>
+
+        <p>
+          We provide premium villas, apartments, commercial spaces,
+          and plots with complete transparency and customer support.
+        </p>
+
+        <a href="#" class="btn">Read More</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stats-grid">
+
+      <div class="stat-box">
+        <h2>500+</h2>
+        <p>Properties Sold</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>1200+</h2>
+        <p>Happy Clients</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>15+</h2>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>50+</h2>
+        <p>Expert Agents</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section>
+
+    <div class="section-title">
+      <h2>Client Testimonials</h2>
+      <p>What our customers say</p>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+        <p>
+          "Amazing service and genuine properties.
+          Highly recommended!"
+        </p>
+        <h4>- Ramesh Kumar</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          "Very professional team and smooth buying experience."
+        </p>
+        <h4>- Priya Reddy</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>
+          "Found my dream villa through Ongole Properties."
+        </p>
+        <h4>- Suresh Babu</h4>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>Get in touch for property inquiries</p>
+    </div>
+
+    <div class="contact-form">
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="email" placeholder="Your Email">
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button class="btn">Send Message</button>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>© 2026 Ongole Properties | All Rights Reserved</p>
+  </footer>
+    
+</body>
+</html>
