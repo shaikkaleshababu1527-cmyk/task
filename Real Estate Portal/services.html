@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real estate Portal</title>
+    <title>Services</title>
 </head>
 
 <style>
-  *{
+
+
+ *{
       margin:0;
       padding:0;
       box-sizing:border-box;
@@ -310,10 +312,10 @@
     /* FAQ */
 
     .faq-box{
-      max-width:500px;
+      max-width:900px;
       margin:auto;
       background:white;
-      padding:35px 25px;
+      padding:40px;
       border-radius:20px;
       box-shadow:0 10px 25px rgba(0,0,0,0.08);
     }
@@ -335,15 +337,9 @@
       background:white;
     }
 
-    .contact-container{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:30px;
-      align-items:stretch;
-    }
-
     .contact-form{
-      width:100%;
+      max-width:700px;
+      margin:auto;
     }
 
     .contact-form input,
@@ -360,19 +356,6 @@
     textarea{
       resize:none;
       height:150px;
-    }
-
-    .map-box{
-      width:100%;
-      min-height:450px;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .map-box iframe{
-      width:100%;
-      height:100%;
     }
 
     /* FOOTER */
@@ -412,13 +395,12 @@
 
     }
 
-  </style>
 
-</head>
-
+</style>
 <body>
 
-  <!-- HEADER -->
+
+    <!-- HEADER -->
 
   <header>
 
@@ -450,153 +432,7 @@
 
   </section>
 
-  <!-- SEARCH -->
-
-  <section class="search-section">
-
-    <div class="section-title">
-      <h2>Search Properties</h2>
-      <p>Find the perfect property in your budget</p>
-    </div>
-
-    <div class="search-box">
-
-      <input type="text" placeholder="Enter Location">
-
-      <select>
-        <option>Property Type</option>
-        <option>Villa</option>
-        <option>Apartment</option>
-        <option>Plot</option>
-      </select>
-
-      <select>
-        <option>Budget</option>
-        <option>₹20L - ₹50L</option>
-        <option>₹50L - ₹1Cr</option>
-        <option>₹1Cr+</option>
-      </select>
-
-      <button class="btn">Search</button>
-
-    </div>
-
-  </section>
-
-  <!-- PROPERTIES -->
-
-  <section id="properties">
-
-    <div class="section-title">
-      <h2>Featured Properties</h2>
-      <p>Explore our latest premium listings</p>
-    </div>
-
-    <div class="property-grid">
-
-      <div class="property-card">
-
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="property-info">
-
-          <div class="price">₹75 Lakhs</div>
-
-          <h3>Luxury Villa</h3>
-
-          <p>Premium 3BHK villa with modern interiors and private garden.</p>
-
-          <p><strong>Location:</strong> Mangamuru Road, Ongole</p>
-
-          <p><strong>Area:</strong> 2400 Sq.ft</p>
-
-          <p><strong>Bedrooms:</strong> 3</p>
-
-          <p><strong>Bathrooms:</strong> 3</p>
-
-          <p><strong>Status:</strong> Ready To Move</p>
-
-          <p><strong>Parking:</strong> Available</p>
-
-          <p><strong>Nearby:</strong> Schools, Hospitals & Shopping Mall</p>
-
-          <a href="#" class="btn">View Details</a>
-
-        </div>
-
-      </div>
-
-      <div class="property-card">
-
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="property-info">
-
-          <div class="price">₹55 Lakhs</div>
-
-          <h3>Modern Apartment</h3>
-
-          <p>Beautiful 2BHK apartment located near city center.</p>
-
-          <p><strong>Location:</strong> Kurnool Road, Ongole</p>
-
-          <p><strong>Area:</strong> 1600 Sq.ft</p>
-
-          <p><strong>Bedrooms:</strong> 2</p>
-
-          <p><strong>Bathrooms:</strong> 2</p>
-
-          <p><strong>Status:</strong> New Construction</p>
-
-          <p><strong>Parking:</strong> Covered Parking</p>
-
-          <p><strong>Nearby:</strong> Bus Stand & Shopping Centers</p>
-
-          <a href="#" class="btn">View Details</a>
-
-        </div>
-
-      </div>
-
-      <div class="property-card">
-
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="property-info">
-
-          <div class="price">₹1.2 Crore</div>
-
-          <h3>Premium Duplex</h3>
-
-          <p>Spacious duplex house with luxury interiors and parking.</p>
-
-          <p><strong>Location:</strong> Lawyer Pet, Ongole</p>
-
-          <p><strong>Area:</strong> 3500 Sq.ft</p>
-
-          <p><strong>Bedrooms:</strong> 4</p>
-
-          <p><strong>Bathrooms:</strong> 4</p>
-
-          <p><strong>Status:</strong> Ready To Occupy</p>
-
-          <p><strong>Parking:</strong> 2 Car Parking</p>
-
-          <p><strong>Nearby:</strong> Hospitals & IT Offices</p>
-
-          <a href="#" class="btn">View Details</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SERVICES -->
-
-  <section class="services" id="services">
+     <section class="services" id="services">
 
     <div class="section-title">
       <h2>Our Services</h2>
@@ -607,22 +443,30 @@
 
       <div class="service-box">
         <h3>Buy Property</h3>
-        <p>Find premium villas, apartments, and plots at the best prices.</p>
+        <p>
+          Find premium villas, apartments, and plots at the best prices.
+        </p>
       </div>
 
       <div class="service-box">
         <h3>Sell Property</h3>
-        <p>Get genuine buyers and maximum market value for your property.</p>
+        <p>
+          Get genuine buyers and maximum market value for your property.
+        </p>
       </div>
 
       <div class="service-box">
         <h3>Rental Services</h3>
-        <p>Affordable rental homes and commercial spaces available.</p>
+        <p>
+          Affordable rental homes and commercial spaces available.
+        </p>
       </div>
 
       <div class="service-box">
         <h3>Legal Assistance</h3>
-        <p>Documentation, registrations, and legal property verification.</p>
+        <p>
+          Documentation, registrations, and legal property verification.
+        </p>
       </div>
 
     </div>
@@ -664,43 +508,9 @@
 
   </section>
 
-  <!-- ABOUT -->
 
-  <section id="about">
 
-    <div class="about">
-
-      <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="about-text">
-
-        <h2>About Ongole Properties</h2>
-
-        <p>
-          Ongole Properties is a trusted real estate platform helping
-          families find dream homes and profitable investments.
-        </p>
-
-        <p>
-          We specialize in villas, apartments, plots, commercial buildings,
-          and luxury duplex houses in prime Ongole locations.
-        </p>
-
-        <p>
-          With experienced agents and verified properties,
-          we ensure safe and transparent property transactions.
-        </p>
-
-        <a href="#" class="btn">Read More</a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- STATS -->
-
+  
   <section class="stats">
 
     <div class="stats-grid">
@@ -729,130 +539,6 @@
 
   </section>
 
-  <!-- TESTIMONIALS -->
-
-  <section>
-
-    <div class="section-title">
-      <h2>Client Testimonials</h2>
-      <p>What our customers say</p>
-    </div>
-
-    <div class="testimonial-grid">
-
-      <div class="testimonial">
-        <p>"Amazing service and genuine properties. Highly recommended!"</p>
-        <h4>- Ramesh Kumar</h4>
-      </div>
-
-      <div class="testimonial">
-        <p>"Very professional team and smooth buying experience."</p>
-        <h4>- Priya Sharma</h4>
-      </div>
-
-      <div class="testimonial">
-        <p>"Found my dream villa through Ongole Properties."</p>
-        <h4>- Suresh Babu</h4>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FAQ -->
-
-  <section>
-
-    <div class="section-title">
-      <h2>Frequently Asked Questions</h2>
-    </div>
-
-    <div class="faq-box">
-
-      <h3>Do you provide loan assistance?</h3>
-      <p>Yes, we help customers get home loans from leading banks.</p>
-
-      <h3>Are the properties legally verified?</h3>
-      <p>All properties are legally verified with proper documentation.</p>
-
-      <h3>Can I schedule a site visit?</h3>
-      <p>Yes, contact our team anytime for free property visits.</p>
-
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section class="contact" id="contact">
-
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>Get in touch for property inquiries</p>
-    </div>
-
-    <div class="contact-container">
-
-      <!-- CONTACT FORM -->
-
-      <div class="contact-form">
-
-        <input type="text" placeholder="Your Name">
-
-        <input type="email" placeholder="Your Email">
-
-        <input type="text" placeholder="Phone Number">
-
-        <textarea placeholder="Your Message"></textarea>
-
-        <button class="btn">Send Message</button>
-
-      </div>
-
-      <!-- GOOGLE MAP -->
-
-      <div class="map-box">
-
-        <iframe
-          src="https://www.google.com/maps?q=Ongole&output=embed"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <h2>Ongole Properties</h2>
-
-    <p>
-      Your trusted real estate partner for villas,
-      apartments, plots, and commercial spaces.
-    </p>
-
-    <p><strong>Office:</strong> Near RTC Bus Stand, Ongole</p>
-
-    <p><strong>Phone:</strong> +91 8897899818</p>
-
-    <p><strong>Email:</strong> info@ongoleproperties.com</p>
-
-    <p><strong>Working Hours:</strong> Mon - Sat | 9 AM - 7 PM</p>
-
-    <br>
-
-    <p>© 2026 Ongole Properties | All Rights Reserved</p>
-
-  </footer>
-
-</body>
-</html>
     
 </body>
 </html>
