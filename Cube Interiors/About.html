@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f7f7;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 70px;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:white;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#d4a373;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1800') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+background-attachment:fixed;
+}
+
+.hero-content h1{
+font-size:70px;
+margin-bottom:20px;
+animation:fadeDown 1s ease;
+}
+
+.hero-content p{
+font-size:22px;
+color:#eee;
+animation:fadeUp 1.5s ease;
+}
+
+/* SECTION */
+
+.container{
+padding:100px 70px;
+}
+
+.section{
+background:white;
+padding:60px;
+margin-bottom:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+animation:fadeIn 1s ease;
+transition:0.5s;
+overflow:hidden;
+}
+
+.section:hover{
+transform:translateY(-10px);
+}
+
+.section-title{
+font-size:40px;
+margin-bottom:20px;
+color:#d4a373;
+position:relative;
+}
+
+.section-title::after{
+content:'';
+width:80px;
+height:4px;
+background:#d4a373;
+display:block;
+margin-top:10px;
+border-radius:10px;
+}
+
+.section p{
+font-size:17px;
+line-height:1.9;
+color:#555;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* CARD */
+
+.card{
+background:#fafafa;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:0.5s;
+}
+
+.card:hover img{
+transform:scale(1.1);
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+font-size:24px;
+}
+
+.card-content p{
+font-size:15px;
+color:#666;
+line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.stat-box{
+background:#111;
+color:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+transition:0.5s;
+}
+
+.stat-box:hover{
+background:#d4a373;
+transform:scale(1.05);
+}
+
+.stat-box h2{
+font-size:50px;
+margin-bottom:10px;
+}
+
+/* TEAM */
+
+.team-card{
+text-align:center;
+}
+
+.team-card img{
+height:320px;
+}
+
+/* TIMELINE */
+
+.timeline{
+margin-top:40px;
+border-left:4px solid #d4a373;
+padding-left:30px;
+}
+
+.timeline-item{
+margin-bottom:40px;
+position:relative;
+}
+
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-40px;
+top:5px;
+width:20px;
+height:20px;
+background:#d4a373;
+border-radius:50%;
+}
+
+.timeline-item h3{
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:45px;
+}
+
+.container{
+padding:70px 20px;
+}
+
+.section{
+padding:30px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+}
+</style>
+<body>
+
+
+    <!-- NAVBAR -->
+
+<header>
+
+<nav>
+
+<div class="logo">Cube Interiors</div>
+
+<ul>
+<li><a href="Home.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>About Us</h1>
+
+<p>
+Designing Luxury Spaces With Creativity & Elegance
+</p>
+
+</div>
+
+</section>
+
+<!-- MAIN -->
+
+<div class="container">
+
+<!-- SECTION 1 -->
+
+<div class="section">
+
+<h2 class="section-title">Who We Are</h2>
+
+<p>
+Cube Interiors is a premium interior design company focused on
+luxury homes, modern offices, villas and commercial spaces.
+We create elegant interiors that combine beauty, comfort and functionality.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200">
+
+<div class="card-content">
+<h3>Luxury Interiors</h3>
+<p>
+Elegant and premium interiors designed for modern lifestyles.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200">
+
+<div class="card-content">
+<h3>Modern Kitchens</h3>
+<p>
+Functional modular kitchens with premium aesthetics.
+</p>
+</div>
+
+</div>
+
+<div class="card">
+<img src="data:image/jpeg;base64,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">
+
+<div class="card-content">
+<h3>Elegant Bedrooms</h3>
+<p>
+Comfortable bedroom spaces with luxurious finishing.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SECTION 2 -->
+
+<div class="section">
+
+<h2 class="section-title">Our Mission</h2>
+
+<p>
+Our mission is to transform ordinary spaces into luxurious
+and meaningful environments with creativity and innovation.
+</p>
+
+</div>
+
+<!-- SECTION 3 -->
+
+<div class="section">
+
+<h2 class="section-title">Our Vision</h2>
+
+<p>
+We aim to become one of the leading luxury interior design
+brands known for modern aesthetics and exceptional quality.
+</p>
+
+</div>
+
+<!-- SECTION 4 -->
+
+<div class="section">
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h2>350+</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Customer Support</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- SECTION 5 -->
+
+<div class="section">
+
+<h2 class="section-title">Our Design Process</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Consultation</h3>
+<p>
+Understanding client requirements and ideas.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Planning</h3>
+<p>
+Creating layouts and design concepts.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Execution</h3>
+<p>
+Implementing premium interiors with perfection.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Final Delivery</h3>
+<p>
+Delivering luxurious spaces with quality assurance.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- SECTION 6 -->
+
+<div class="section">
+
+<h2 class="section-title">Meet Our Team</h2>
+
+<div class="grid">
+
+<div class="card team-card">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200">
+
+<div class="card-content">
+<h3>Rahul Sharma</h3>
+<p>Lead Interior Designer</p>
+</div>
+
+</div>
+
+<div class="card team-card">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200">
+
+<div class="card-content">
+<h3>Priya Kapoor</h3>
+<p>Creative Architect</p>
+</div>
+
+</div>
+
+<div class="card team-card">
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200">
+
+<div class="card-content">
+<h3>Arjun Mehta</h3>
+<p>Project Manager</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- SECTION 7 -->
+
+<div class="section">
+
+<h2 class="section-title">Our Values</h2>
+
+<p>
+We believe in innovation, luxury, sustainability,
+professionalism and customer satisfaction.
+</p>
+
+</div>
+
+<!-- SECTION 8 -->
+
+<div class="section">
+
+<h2 class="section-title">Awards & Recognition</h2>
+
+<p>
+Cube Interiors has been recognized for excellence
+in luxury interior design and innovative architecture.
+</p>
+
+</div>
+
+<!-- SECTION 9 -->
+
+<div class="section">
+
+<h2 class="section-title">Client Testimonials</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
+<h3>★★★★★</h3>
+<p>
+Amazing experience with Cube Interiors.
+Our home looks absolutely luxurious.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>★★★★★</h3>
+<p>
+Professional team with creative ideas and premium execution.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>★★★★★</h3>
+<p>
+Beautiful interiors delivered on time with perfection.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- SECTION 10 -->
+
+<div class="section">
+
+<h2 class="section-title">Future Goals</h2>
+
+<p>
+Our goal is to expand globally and continue delivering
+world-class luxury interiors with modern innovation.
+</p>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Cube Interiors | Luxury Interior Design Company
+</p>
+
+</footer>
+    
+</body>
+</html>
