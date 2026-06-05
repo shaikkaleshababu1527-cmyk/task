@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+</head>
+<style>
+     body {
+            font-family: Arial, sans-serif;
+            background: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background:white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 450px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        p {
+            margin: 6px 0;
+        }
+</style>
+<body>
+
+    <div class="container">
+
+        <h2>Marks Calculator</h2>
+       <input type="text" id="studentName" placeholder="Enter Student Name">
+
+    <input type="number" id="sub1" placeholder="Enter Subject 1 Marks">
+
+    <input type="number" id="sub2" placeholder="Enter Subject 2 Marks">
+
+    <button onclick="calculateMarks()">Calculate</button>
+
+    <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateMarks() {
+            const name = document.getElementById('studentName').value;
+            const sub1 = parseFloat(document.getElementById('sub1').value);
+            const sub2 = parseFloat(document.getElementById('sub2').value);
+
+            if (isNaN(sub1) || isNaN(sub2)) {
+                alert('Please enter valid marks for both subjects.');
+                return;
+            }
+
+            const total = sub1 + sub2;
+            const percentage = (total / 200) * 100; 
+            let grade;
+
+            if (percentage >= 90)
+             {
+                grade = 'A';
+            }
+             else if (percentage >= 80)
+              {
+                grade = 'B';
+            }
+             else if (percentage >= 70)
+              {
+                grade = 'C';
+            } 
+            else if (percentage >= 60)
+             {
+                grade = 'D';
+            } 
+            else {
+                grade = 'F';
+            }
+
+            document.getElementById('result').innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Total Marks:</strong> ${total}</p>
+                <p><strong>Percentage:</strong> ${percentage.toFixed(2)}%</p>
+                <p><strong>Grade:</strong> ${grade}</p>
+            `;
+        }
+    </script>
+</body>
+
+
+</html>
